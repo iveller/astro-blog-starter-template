@@ -1,88 +1,333 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Veller Partners — Investment Banking & Financial Advisory</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veller Partners | Institutional Capital & Investment Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #e8eef7;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1.2rem 0;
+        }
+        
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        nav a {
+            color: #b4bcc8;
+            text-decoration: none;
+            margin-left: 2.5rem;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #ffffff;
+        }
+        
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            text-align: center;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff 0%, #b4bcc8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: #a8b2c1;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #4a5f8f 0%, #3a4f7f 100%);
+            color: #ffffff;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 1rem;
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(135deg, #5a6f9f 0%, #4a5f8f 100%);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .section-content p {
+            font-size: 1.05rem;
+            color: #b4bcc8;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .pillar {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .pillar:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-4px);
+        }
+        
+        .pillar h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .pillar p {
+            color: #a8b2c1;
+            font-size: 0.95rem;
+        }
+        
+        .contact-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 600px;
+            margin: 3rem auto 0;
+        }
+        
+        .contact-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info {
+            margin: 1.5rem 0;
+        }
+        
+        .contact-info a {
+            color: #4a5f8f;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: #5a6f9f;
+        }
+        
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: #7a8294;
+            font-size: 0.9rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: #7a8294;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #b4bcc8;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section h2 {
+                font-size: 1.8rem;
+            }
+            
+            nav a {
+                margin-left: 1.5rem;
+                font-size: 0.85rem;
+            }
+            
+            .navbar {
+                padding: 0 1rem;
+            }
+            
+            .section {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo">Veller Partners</a>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">VELLER PARTNERS</a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#approach">Approach</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <main>
     <section class="hero">
-      <div class="hero-content">
-        <h1>Veller Partners</h1>
-        <p class="tagline">Investment Banking & Financial Advisory</p>
-        <p class="subtitle">Trusted strategic and financial advice for growth-focused companies.</p>
-        <a href="#contact" class="cta-btn">Get in Touch</a>
-      </div>
+        <h1>Institutional Capital Solutions</h1>
+        <p>Strategic partnerships deploying significant capital to support transformative enterprises and emerging technologies</p>
+        <a href="#contact" class="cta-button">Investor Relations</a>
     </section>
 
-    <section id="services" class="services">
-      <h2>Our Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>M&A Advisory</h3>
-          <p>Buy-side and sell-side merger & acquisition advisory, from strategy to closing.</p>
+    <section class="section" id="about">
+        <h2>About Veller Partners</h2>
+        <div class="section-content">
+            <p>Veller Partners is a registered investment partnership focused on direct capital deployment and strategic partnerships with high-potential ventures in transformative sectors. We leverage institutional expertise to identify, evaluate, and support companies at critical inflection points.</p>
+            <p style="margin-top: 2rem; color: #7a8294; font-size: 0.95rem;">Founded 2024 | Registered Investment Partnership</p>
         </div>
-        <div class="service-card">
-          <h3>Capital Raising</h3>
-          <p>Debt and equity capital solutions tailored to your growth stage and objectives.</p>
-        </div>
-        <div class="service-card">
-          <h3>Strategic Consulting</h3>
-          <p>Corporate strategy, valuation, and financial modeling to drive informed decisions.</p>
-        </div>
-        <div class="service-card">
-          <h3>Restructuring</h3>
-          <p>Financial restructuring and turnaround advisory to restore stability and value.</p>
-        </div>
-      </div>
     </section>
 
-    <section id="about" class="about">
-      <h2>About Us</h2>
-      <p>Veller Partners is a boutique investment banking firm providing senior-level attention
-        to every engagement. We combine deep industry expertise with a commitment to delivering
-        results that align with our clients' long-term goals.</p>
+    <section class="section" id="approach">
+        <h2>Investment Approach</h2>
+        <div class="section-content">
+            <p>Our strategy is built on deep sector expertise, rigorous due diligence, and active partnership with management teams. We provide not only capital but strategic guidance and operational support.</p>
+        </div>
+        
+        <div class="pillars">
+            <div class="pillar">
+                <h3>Strategic Capital</h3>
+                <p>Flexible funding structures tailored to enterprise needs and growth stages</p>
+            </div>
+            <div class="pillar">
+                <h3>Operational Excellence</h3>
+                <p>Value-add partnerships with proven management expertise and market insight</p>
+            </div>
+            <div class="pillar">
+                <h3>Long-Term Vision</h3>
+                <p>Patient capital aligned with sustainable value creation and exit opportunities</p>
+            </div>
+        </div>
     </section>
 
-    <section id="contact" class="contact">
-      <h2>Contact Us</h2>
-      <p>Ready to discuss how we can help? Reach out for a confidential consultation.</p>
-      <a href="mailto:info@vellerpartners.com" class="cta-btn">info@vellerpartners.com</a>
+    <section class="section" id="contact">
+        <h2>Investor Relations</h2>
+        <div class="contact-section">
+            <h3>Get in Touch</h3>
+            <p style="color: #a8b2c1; margin-bottom: 2rem;">For investment opportunities, partnership inquiries, or due diligence information</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong></p>
+                <a href="mailto:investors@vellerpartners.com">investors@vellerpartners.com</a>
+            </div>
+            <div class="contact-info">
+                <p style="margin-top: 1.5rem; color: #7a8294; font-size: 0.9rem;">
+                    All inquiries are subject to confidentiality agreements and proper KYC procedures
+                </p>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p>&copy; {new Date().getFullYear()} Veller Partners. All rights reserved.</p>
-      <p class="disclaimer">Veller Partners is a financial advisory firm. This website is for informational purposes only
-        and does not constitute an offer or solicitation to buy or sell any securities.</p>
-    </div>
-  </footer>
-
-  <style is:global>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Georgia, 'Times New Roman', serif; color: #1a1a2e; }
-    .site-header { background: #0f1923; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
-    .header-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    .logo { color: #c5a572; text-decoration: none; font-size: 1.3rem; font-weight: bold; letter-spacing: 1px; }
-    nav a { color: #fff; text-decoration: none; margin-left: 1.5rem; font-family: sans-serif; font-size: 0.95rem; }
-    nav a:hover { color: #c5a572; }
-    .hero { background: linear-gradient(135deg, #0f1923 0%, #1a2a3a 100%); color: #fff; text-align: center; padding: 6rem 2rem; }
-    .hero h1 { font-size: 3rem; margin: 0 0 0.5rem; letter-spacing: 2px; }
-    .tagline { font-size: 1.3rem; color: #c5a572; margin: 0 0 1rem; font-style: italic; }
-    .subtitle { font-size: 1.1rem; opacity: 0.85; max-width: 600px; margin: 0 auto 2rem; }
-    .cta-btn { display
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>&copy; 2024 Veller Partners. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
