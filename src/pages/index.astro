@@ -8,13 +8,12 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <style>
+    <style is:inline>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
@@ -22,7 +21,6 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
         header {
             background: rgba(10, 14, 39, 0.95);
             backdrop-filter: blur(10px);
@@ -32,7 +30,6 @@
             z-index: 1000;
             padding: 1.2rem 0;
         }
-        
         .navbar {
             max-width: 1200px;
             margin: 0 auto;
@@ -41,7 +38,6 @@
             justify-content: space-between;
             align-items: center;
         }
-        
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
@@ -49,7 +45,6 @@
             color: #ffffff;
             text-decoration: none;
         }
-        
         nav a {
             color: #b4bcc8;
             text-decoration: none;
@@ -57,11 +52,9 @@
             font-size: 0.95rem;
             transition: color 0.3s ease;
         }
-        
         nav a:hover {
             color: #ffffff;
         }
-        
         .hero {
             max-width: 1200px;
             margin: 0 auto;
@@ -73,7 +66,6 @@
             justify-content: center;
             align-items: center;
         }
-        
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
@@ -84,7 +76,6 @@
             background-clip: text;
             letter-spacing: -1px;
         }
-        
         .hero p {
             font-size: 1.25rem;
             color: #a8b2c1;
@@ -92,7 +83,6 @@
             margin: 0 auto 2rem;
             line-height: 1.8;
         }
-        
         .cta-button {
             display: inline-block;
             background: linear-gradient(135deg, #4a5f8f 0%, #3a4f7f 100%);
@@ -106,34 +96,200 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             margin-top: 1rem;
         }
-        
         .cta-button:hover {
             background: linear-gradient(135deg, #5a6f9f 0%, #4a5f8f 100%);
             border-color: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }
-        
         .section {
             max-width: 1200px;
             margin: 0 auto;
             padding: 5rem 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
         .section h2 {
             font-size: 2.2rem;
             margin-bottom: 3rem;
             text-align: center;
             font-weight: 700;
         }
-        
         .section-content {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
-        
         .section-content p {
             font-size: 1.05rem;
             color: #b4bcc8;
-            margin-bottom:
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .pillar {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .pillar:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-4px);
+        }
+        .pillar h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        .pillar p {
+            color: #a8b2c1;
+            font-size: 0.95rem;
+        }
+        .contact-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 600px;
+            margin: 3rem auto 0;
+        }
+        .contact-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-info {
+            margin: 1.5rem 0;
+        }
+        .contact-info a {
+            color: #4a5f8f;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: #5a6f9f;
+        }
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: #7a8294;
+            font-size: 0.9rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-links {
+            margin-bottom: 1.5rem;
+        }
+        .footer-links a {
+            color: #7a8294;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #b4bcc8;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .section h2 {
+                font-size: 1.8rem;
+            }
+            nav a {
+                margin-left: 1.5rem;
+                font-size: 0.85rem;
+            }
+            .navbar {
+                padding: 0 1rem;
+            }
+            .section {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">Veller Partners LLC</a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#approach">Approach</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <h1>Institutional Capital Solutions</h1>
+        <p>Strategic partnerships deploying significant capital to support transformative enterprises and emerging technologies</p>
+        <a href="#contact" class="cta-button">Investor Relations</a>
+    </section>
+    <section class="section" id="about">
+        <h2>About Veller Partners LLC</h2>
+        <div class="section-content">
+            <p>Veller Partners LLC is a registered investment partnership focused on direct capital deployment and strategic partnerships with high-potential ventures in transformative sectors. We leverage institutional expertise to identify, evaluate, and support companies at critical inflection points.</p>
+            <p style="margin-top: 2rem; color: #7a8294; font-size: 0.95rem;">Founded 2026 | Registered Investment Partnership</p>
+        </div>
+    </section>
+    <section class="section" id="approach">
+        <h2>Investment Approach</h2>
+        <div class="section-content">
+            <p>Our strategy is built on deep sector expertise, rigorous due diligence, and active partnership with management teams. We provide not only capital but strategic guidance and operational support.</p>
+        </div>
+        <div class="pillars">
+            <div class="pillar">
+                <h3>Strategic Capital</h3>
+                <p>Flexible funding structures tailored to enterprise needs and growth stages</p>
+            </div>
+            <div class="pillar">
+                <h3>Operational Excellence</h3>
+                <p>Value-add partnerships with proven management expertise and market insight</p>
+            </div>
+            <div class="pillar">
+                <h3>Long-Term Vision</h3>
+                <p>Patient capital aligned with sustainable value creation and exit opportunities</p>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="contact">
+        <h2>Investor Relations</h2>
+        <div class="contact-section">
+            <h3>Get in Touch</h3>
+            <p style="color: #a8b2c1; margin-bottom: 2rem;">For investment opportunities, partnership inquiries, or due diligence information</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong></p>
+                <a href="mailto:iv@vellerpartners.com">iv@vellerpartners.com</a>
+            </div>
+            <div class="contact-info">
+                <p style="margin-top: 1.5rem; color: #7a8294; font-size: 0.9rem;">
+                    All inquiries are subject to confidentiality agreements and proper KYC procedures
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>&copy; 2026 Veller Partners LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
