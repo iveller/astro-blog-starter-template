@@ -39,11 +39,23 @@
             align-items: center;
         }
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
             font-size: 1.5rem;
             font-weight: 700;
             letter-spacing: -0.5px;
             color: #ffffff;
             text-decoration: none;
+        }
+        .logo img {
+            width: 42px;
+            height: 42px;
+        }
+        .hero-logo {
+            width: 130px;
+            height: 130px;
+            margin-bottom: 2rem;
         }
         nav a {
             color: #b4bcc8;
@@ -225,7 +237,7 @@
 <body>
     <header>
         <div class="navbar">
-            <a href="#" class="logo">Veller Partners LLC</a>
+            <a href="/" class="logo"><img src="/logo.svg" alt="Veller Partners LLC logo"><span>Veller Partners LLC</span></a>
             <nav>
                 <a href="#about">About</a>
                 <a href="#approach">Approach</a>
@@ -234,6 +246,7 @@
         </div>
     </header>
     <section class="hero">
+        <img class="hero-logo" src="/logo.svg" alt="Veller Partners LLC cube logo">
         <h1>Institutional Capital Solutions</h1>
         <p>Strategic partnerships deploying significant capital to support transformative enterprises and emerging technologies</p>
         <a href="#contact" class="cta-button">Investor Relations</a>
@@ -284,9 +297,9 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="#contact">Contact</a>
             </div>
             <p>&copy; 2026 Veller Partners LLC. All rights reserved.</p>
         </div>
